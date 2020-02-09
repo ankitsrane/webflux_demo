@@ -88,6 +88,7 @@ public class FluxAndMonoTest {
     public void monoTest(){
 
         Mono<String>  stringMono = Mono.just("Spring");
+        stringMono.subscribe(e -> System.out.println(e));
 
         StepVerifier.create(stringMono.log())
                 .expectNext("Spring")

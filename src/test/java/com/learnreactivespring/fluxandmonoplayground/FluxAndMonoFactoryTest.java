@@ -21,7 +21,8 @@ public class FluxAndMonoFactoryTest {
                 .log();
 
         StepVerifier.create(namesFlux)
-                .expectNext("adam","anna","jack","jenny")
+                .expectNext("adam")
+                .expectNext("anna","jack","jenny")
                 .verifyComplete();
     }
 
